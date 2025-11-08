@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, #4f46e5, #9333ea);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ---------- JOIN PAGE CARD ---------- */
+
+.center-card {
+    width: 340px;
+    padding: 35px 30px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.8s ease;
+}
+
+.center-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.center-card h1 {
+    margin-bottom: 18px;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+
+/* Inputs */
+
+.center-card input {
+    width: 100%;
+    padding: 10px 14px;
+    margin: 10px 0 18px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.center-card input:focus {
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+.center-card input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* Role Selection */
+
+.role-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 18px;
+}
+
+.role-row label {
+    cursor: pointer;
+    color: #f8f8f8;
+    transition: 0.3s;
+}
+
+.role-row label:hover {
+    color: #e0e0ff;
+}
+
+.role-row input {
+    accent-color: #6366f1;
+    transform: scale(1.2);
+}
+
+
+/* Button */
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Hint text */
+
+.hint {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+
+/* ---------- MAP PAGE ---------- */
+
+#topbar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+#controls {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 10px;
+}
+
+
+/* Toggle Switch */
+
+.toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+}
+
+.toggle input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+
+/* Back Button */
+
+#backBtn {
+    padding: 8px 14px;
+    border: none;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#backBtn:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+
+/* ---------- ANIMATION ---------- */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 480px) {
+    .center-card {
+        width: 90%;
+        padding: 25px 20px;
+    }
+    #topbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+}
