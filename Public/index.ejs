@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bus Tracking - Join</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <div class="center-card">
+        <h1>Bus Tracking</h1>
+
+        <label>Bus Number</label>
+        <input id="busNumber" placeholder="e.g. 123A" />
+
+        <div class="role-row">
+            <label><input type="radio" name="role" value="student" checked /> Student</label>
+            <label><input type="radio" name="role" value="driver" /> Driver</label>
+        </div>
+
+        <button id="joinBtn">Join</button>
+
+        <p class="hint">Made with &hearts; and Unreal_Vikhyat &#x1F9E0; </p>
+    </div>
+
+    <script>
+        const joinBtn = document.getElementById("joinBtn");
+        joinBtn.addEventListener("click", () => {
+            const bus = document.getElementById("busNumber").value.trim();
+            const role = document.querySelector('input[name="role"]:checked').value;
+            if (!bus) return alert("Enter bus number");
+            // Redirect to map route with role & bus in query
+            window.location = `/map?role=${role}&bus=${encodeURIComponent(bus)}`;
+        });
+    </script>
+</body>
+
+</html>
